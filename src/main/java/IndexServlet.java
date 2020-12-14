@@ -22,7 +22,7 @@ public class IndexServlet extends HttpServlet {
             try {
                 Hospital hospital = parser.parse(fileName + ".xml");
                 List<Patient> patients = hospital.getHospitalPatients();
-                
+
                 req.setAttribute("patients", patients);
             } catch (Exception e) {
                 e.printStackTrace();
